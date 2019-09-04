@@ -52,7 +52,6 @@ slaves
 hadoop-env.sh  
 
 1. 修改core-site.xml  
-
 ```xml
 <configuration>
     <property>
@@ -67,7 +66,6 @@ hadoop-env.sh
 ```
 
 2. 修改hdfs-site.xml  
-
 ```xml
 <configuration>
         <property>
@@ -102,7 +100,6 @@ hadoop-env.sh
 ```
 
 3. 修改mapred-site.xml  
-
 ```xml
 <configuration>
   <property>
@@ -121,7 +118,6 @@ hadoop-env.sh
 ```
 
 4. 修改yarn-site.xml  
-
 ```xml
 <configuration>
         <property>
@@ -438,8 +434,7 @@ tar zxvf hbase-1.3.5-bin.tar.gz -C /yibao/data/app
 cd hbase-1.3.5/conf
 ```
 #### 配置hbase
-1. 修改hbase-site.xml  
-
+1. 修改hbase-site.xml
 ```xml
 <configuration>  
   <property>  

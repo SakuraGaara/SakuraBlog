@@ -9,4 +9,4 @@ tags:
 > kubectl客户端命令
 
 
-<https://sakuragaara.github.io/assets/images/img/20190426/kubernetes-kubectl-cheatsheet.png>
+<https://sakuragaara.github.io/images/img/20190426/kubernetes-kubectl-cheatsheet.png>
