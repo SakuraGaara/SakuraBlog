@@ -97,7 +97,7 @@ menu:
   tags: /tags/ || tags
   categories: /categories/ || th
   archives: /archives/ || archive
-  schedule: /schedule/ || calendar
+  #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
@@ -158,8 +158,7 @@ links_title: 推荐阅读
 #links_layout: block
 links_layout: inline
 links:
-  Hexo: https://hexo.io/zh-cn/docs/
-  Next: http://theme-next.iissnan.com/getting-started.html
+  Hexo优化: https://segmentfault.com/a/1190000009544924#articleHeader30
   遇见西门: https://www.simon96.online/
   Kubernetes指南: https://kubernetes.feisky.xyz/bu-shu-pei-zhi/cluster/kubeadm
 
