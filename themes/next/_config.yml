@@ -128,11 +128,11 @@ scheme: Gemini
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
   GitHub: https://github.com/SakuraGaara || github
-  #Hi-Linux: https://www.hi-linux.com || github
+  #Hi-Linux: https://www.hi-linux.com
   E-Mail: mailto:mic0601@163.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
-  FB Page: https://www.facebook.com/mic0601 || facebook
+  Facebook: https://www.facebook.com/mic0601 || facebook-square
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
   #YouTube: https://youtube.com/yourname || youtube
@@ -143,12 +143,20 @@ social_icons:
   enable: true
   icons_only: false
   transition: false
+  GitHub: github
+  Twitter: twitter
+  Weibo: weibo
+  简书: heartbeat
+  CSDN: cronsshairs
+  E-Mail: envelope
+  链接: share-alt-square
+  Facebook: facebook-square
 
 # Blog rolls
 links_icon: link
-links_title: Links
-links_layout: block
-#links_layout: inline
+links_title: 推荐阅读
+#links_layout: block
+links_layout: inline
 links:
   Hexo: https://hexo.io/zh-cn/docs/
   Next: http://theme-next.iissnan.com/getting-started.html
@@ -158,7 +166,7 @@ links:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-avatar: /images/favicon.ico
+avatar: /images/d11a7a60301b5fea64a4796faef7c375.jpeg
 
 # Table Of Contents in the Sidebar
 toc:
@@ -815,3 +823,4 @@ images: images
 
 # Theme version
 version: 5.1.4
+
