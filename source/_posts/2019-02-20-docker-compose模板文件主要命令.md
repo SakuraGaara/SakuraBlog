@@ -5,6 +5,10 @@ tags:
   - docker compose
 ---
 
+> docker-compose主要命令及功能
+
+<!--more-->
+
 |命令 | 功能|
 |- |---- |
 build | 指定Dockerfile所在文件的路径

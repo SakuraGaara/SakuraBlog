@@ -13,6 +13,8 @@ tags:
   **[Pod资源清单](https://sakuragaara.github.io/kubernetes/2019/04/18/kubernetes-Pod%E8%B5%84%E6%BA%90%E6%B8%85%E5%8D%95%E6%B3%A8%E8%A7%A3/#) 作为模板内嵌在Pod控制器内进行创建**  
 
 
+<!--more-->
+
 ## Pod控制器
 
 ### ReplicaSet  

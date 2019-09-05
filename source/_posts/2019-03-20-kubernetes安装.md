@@ -21,6 +21,8 @@ $ systemctl disable iptables.service
 $ systemctl stop firewalld.service   
 $ systemctl disable firewalld.service  
 ```  
+<!--more-->
+
 ### 基于主机名  
 master和nodes主机名添加至/etc/hosts  
 ### 主机网络桥接设置  

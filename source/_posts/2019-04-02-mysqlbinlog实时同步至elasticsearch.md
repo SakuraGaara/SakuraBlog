@@ -11,6 +11,8 @@ tags:
 > canal从mysql中获取binlog日志信息，输出至kafka，logstash从kafka中获取日志信息，写入elasticsearch
 > 不过看起来好像毫无意义,所以做的比较简易
 
+<!--more-->
+
 ## demo环境介绍
 - MYSQL: 使用docker做的一个5.7的环境，用于做自己网站的一个数据库
 - Canal: 是阿里巴巴旗下的一款开源项目，纯Java开发。基于数据库增量日志解析，提供增量数据订阅&消费，目前主要支持了MySQL（也支持mariaDB）

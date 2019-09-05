@@ -23,6 +23,8 @@ tags:
 ### kind
 > 定义资源类别，Pod,Service,Deployment,Event,Secret等(注意大小写)  
 
+<!--more-->
+
 ### metadata 
 > 元数据 ``kubectl explain pods.metadata`` 查看帮助  
 

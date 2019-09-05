@@ -9,6 +9,9 @@ tags:
 > python elasticsearch库应用
 > Doc: <https://pypi.org/project/elasticsearch/>
 
+
+<!--more-->
+
 ```python
 # --coding: utf-8 --
 from elasticsearch import Elasticsearch

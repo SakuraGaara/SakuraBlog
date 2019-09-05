@@ -12,6 +12,9 @@ tags:
 ```
 docker run -d -p 5001:5000 --restart=always --name registry -v /data/registry:/var/lib/registry registry:2
 ```
+
+<!--more-->
+
 - Nginx 代理
 
 ```

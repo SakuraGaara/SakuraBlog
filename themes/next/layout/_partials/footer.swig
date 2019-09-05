@@ -26,7 +26,6 @@
 
 {% if theme.footer.powered %}
 
-  /* 访客数量 */
   <div class="powered-by">
   <i class="fa fa-user-md"></i>
   <span id="busuanzi_container_site_uv">

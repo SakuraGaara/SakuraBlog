@@ -18,6 +18,8 @@ docker run -d \
     registry:2
 ```
 
+<!--more-->
+
 ### 配置nginx代理，带密码验证
 ```
 /etc/nginx/conf.d/docker-registry-htpasswd

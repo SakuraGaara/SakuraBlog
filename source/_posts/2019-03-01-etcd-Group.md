@@ -4,8 +4,12 @@ categories: etcd
 tags:
   - etcd
   - 数据库
-  - docker compose
+  - docker-compose
 ---
+
+> docker-compose方式部署etcd集群
+
+<!--more-->
 
 ```yaml
 version: '3'
