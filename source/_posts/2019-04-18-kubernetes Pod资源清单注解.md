@@ -127,6 +127,6 @@ spec:
               port: 5000
           timeoutSeconds: 3
   restartPolicy: OnFailure
-```  
+```
 
 ***tcpSocket没有加host，主要是host默认为containers的IP，而flask启动是0.0.0.0，使用127.0.0.1监听会报错（不知道为什么）***

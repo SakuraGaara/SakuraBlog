@@ -116,7 +116,7 @@ nginx-deploy-86bf78c77-vddwx   1/1     Running   0          57s   10.244.2.4   n
 ### 更改Pod镜像  
 - 滚动更新image ``kubectl set image``  
 - 首先查看一下当前的  
-``` 
+```
 [root@master-01 ~]# kubectl describe pod nginx-deploy|grep -E "^Name:|Image:"  
 Name:               nginx-deploy-86bf78c77-5h4rh  
     Image:          nginx:1.14-alpine  
@@ -134,9 +134,9 @@ Name:               nginx-deploy-86bf78c77-vddwx
 ```
 [root@master-01 ~]# kubectl set image deployment nginx-deploy nginx-deploy=nginx:1.15.10-perl  
 deployment.extensions/nginx-deploy image updated  
-``` 
+```
 - 更新的同时可使用``kubectl rollout status``查看镜像升级状态  
-``` 
+```
 [root@master-01 ~]# kubectl rollout status deployment nginx-deploy  
 Waiting for deployment "nginx-deploy" rollout to finish: 3 out of 5 new replicas have been updated...  
 Waiting for deployment "nginx-deploy" rollout to finish: 3 out of 5 new replicas have been updated...  
@@ -168,7 +168,7 @@ Name:               nginx-deploy-7596d8b647-tttkd
     Image:          nginx:1.15.10-perl  
 Name:               nginx-deploy-7596d8b647-znf24  
     Image:          nginx:1.15.10-perl  
-``` 
+```
   
 ### 回滚镜像  
 - 回滚 ``kubectl rollout undo``  
@@ -244,6 +244,6 @@ status:
 [root@master-01 ~]# kubectl get svc nginx  
 NAME    TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE  
 nginx   NodePort   10.104.62.105   <none>        80:32660/TCP   5d23h 
-``` 
+```
 此时可以使用集群内任意Node节点通过32660端口访问  
   
