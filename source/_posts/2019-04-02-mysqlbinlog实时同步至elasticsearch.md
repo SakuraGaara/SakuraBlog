@@ -66,8 +66,8 @@ for msg in consumer:
 ```
 向数据库中插入数据，运行脚步是否能得到输出结果
 
-![mysqltest](/assets/images/img/2019-04-02 2.16.59.png)  
-![kafka-consumer](/assets/images/img/2019-04-02 2.39.41.png)  
+![mysqltest](/images/img/2019-04-02 2.16.59.png)  
+![kafka-consumer](/images/img/2019-04-02 2.39.41.png)  
 
 kafka既然能接受到canal传来的日志，接下来就可以配置logstash从Kafka接受消息写入es
 
@@ -104,6 +104,6 @@ logstash-kafka-plugin 配置文件[参考](https://www.elastic.co/guide/en/logst
 ./bin/logstash -f kafka-logstash-es.conf
 ```
 3.验证es是否有索引和相关数据
-![check_es](/assets/images/img/2019-04-02 3.06.28.png)
+![check_es](/images/img/2019-04-02 3.06.28.png)
 
 
