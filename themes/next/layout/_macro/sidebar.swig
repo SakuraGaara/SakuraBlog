@@ -169,6 +169,20 @@
           {% endif %}
         </div>
       {% endif %}
+      
+      <!--云标签-->
+      {% if site.tags.length > 1 %}
+          <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+          <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+          <div class="widget-wrap">
+              <h3 class="widget-title">Tag Cloud</h3>
+              <div id="myCanvasContainer" class="widget tagcloud">
+                  <canvas width="200" height="200" id="resCanvas" style="width=100%">
+                      {{ list_tags() }}
+                  </canvas>
+              </div>
+          </div>
+      {% endif %}
 
     </div>
   </aside>
