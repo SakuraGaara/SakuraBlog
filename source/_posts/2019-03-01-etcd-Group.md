@@ -3,7 +3,6 @@ title: etcd-Group
 categories: etcd
 tags:
   - etcd
-  - 数据库
   - docker-compose
 ---
 

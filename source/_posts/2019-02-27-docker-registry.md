@@ -3,8 +3,6 @@ title: docker-registry
 categories: docker
 tags:
   - docker
-  - registry
-  - 仓库
 ---
 
 ### 安装registry

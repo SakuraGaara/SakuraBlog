@@ -3,7 +3,6 @@ title: kubernetes Pod控制器
 categories: kubernetes
 tags:
   - kubernetes
-  - Pod
 ---
 
 > Pod是kubernetes的最小单元, 自主式创建的Pod删除之后就没有了，但是通过资源控制器创建的Pod如果被删除还会重建  

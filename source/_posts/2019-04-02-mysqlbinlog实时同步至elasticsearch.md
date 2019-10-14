@@ -3,9 +3,7 @@ title: mysqlbinlog实时同步至elasticsearch
 categories: elasticsearch
 tags:  
   - elasticsearch  
-  - kafka
   - canal
-  - logstash  
 ---
 
 > canal从mysql中获取binlog日志信息，输出至kafka，logstash从kafka中获取日志信息，写入elasticsearch

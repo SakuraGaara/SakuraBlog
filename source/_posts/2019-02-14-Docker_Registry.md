@@ -4,7 +4,6 @@ categories: docker
 tags:
   - docker
   - harbor
-  - 仓库
 ---
 
 ### Docker registry

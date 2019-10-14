@@ -3,7 +3,6 @@ title: kubernetes应用[一]
 categories: kubernetes  
 tags:  
   - kubernetes  
-  - kubectl  
 ---
 
 > kubectl相关命令操作

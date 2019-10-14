@@ -3,7 +3,6 @@ title: kubernetes Pod资源清单注解
 categories: kubernetes
 tags:
   - kubernetes
-  - Pod
 ---
 
 

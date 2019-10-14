@@ -2,8 +2,7 @@
 title: kubernetes安装  
 categories: kubernetes  
 tags:  
-  - kubernetes  
-  - 安装  
+  - kubernetes
 ---
 
 > kubeadm: 主要用于提供安装kubernetes的辅助工具
