@@ -51,47 +51,61 @@ spec:
         # IfNotPresent：只有镜像不存在时，才会进行镜像拉取,默认为IfNotPresent，但:latest标签的镜像默认为Always
        
       ports: <[]Object>
-        - name: <string>
-          containerPort: <integer>
+      - name: <string>
+        containerPort: <integer>
+
       command: <[]string>
       args: <[]string> # args将参数传给command
       
-      livenessProbe: <Object> 
-          # 存活探针,确定何时重启容器当应用程序处于运行状态但无法做进一步操作，
-          # liveness探针将捕获到deadlock，重启处于该状态下的容器 
-          # Kubernetes支持3种类型的应用健康检查动作，分别为HTTP Get、Container Exec和TCP Socket  
-      readinessProbe: <Object>
-          # 就绪探针,确定容器是否已经就绪可以接受流量,
-          # 只有当Pod中的容器都处于就绪状态时kubelet才会认定该Pod处于就绪状态
-          # 就绪状态, pod才会按照标签加入service  
       lifecycle:
-          postStart: <Object> 
-              # 容器创建成功后，运行前的任务，用于资源部署、环境准备等
-          preStop: <Object> 
-              # 在容器被终止前的任务，用于优雅关闭应用程序、通知其他系统等等
-          
-          # livenessProbe,readinessProbe,lifecycle[postStart,preStop] 中接受属性
-          exec: <Object>
-              command: <[]string>  
-          httpGet: <Object>
-              host: <string> # 连接的主机名，默认连接到pod的IP。你可能想在http header中设置”Host”而不是使用IP
-              httpHeaders: <[]Object>  # 自定义请求的header。HTTP运行重复的header
-              path: <string> # 访问的HTTP server的path
-              port: <string> # 访问的容器的端口名字或者端口号。端口号必须介于1和65525之间
-              scheme: <string> # 连接使用的schema，默认HTTP
-          tcpSocket: <Object>
-              host: <string>
-              port: <string>
-          # livenessProbe,readinessProbe 中接受属性
-          initialDelaySeconds: <integer> # 容器启动后，等待多少秒之后进行第一次探测
-          periodSeconds: <integer> # 执行探测的频率。默认是10秒，最小1秒
-          successThreshold: <integer> # 探测失败后，最少连续探测成功多少次才被认定为成功。默认是1。对于liveness必须是1。最小值是1
-          failureThreshold: <integer> # 探测成功后，最少连续探测失败多少次才被认定为失败。默认是3。最小值是1
-          timeoutSeconds: <integer> # 探测超时时间。默认1秒，最小1秒
-      
+        postStart: <Object> 
+            # 容器创建成功后，运行前的任务，用于资源部署、环境准备等
+        preStop: <Object> 
+          # 在容器被终止前的任务，用于优雅关闭应用程序、通知其他系统等等
+       
+      livenessProbe: <Object> 
+        # 存活探针,确定何时重启容器当应用程序处于运行状态但无法做进一步操作，
+        # liveness探针将捕获到deadlock，重启处于该状态下的容器 
+        # Kubernetes支持3种类型的应用健康检查动作，分别为HTTP Get、Container Exec和TCP Socket  
+      readinessProbe: <Object>
+        # 就绪探针,确定容器是否已经就绪可以接受流量,
+        # 只有当Pod中的容器都处于就绪状态时kubelet才会认定该Pod处于就绪状态
+        # 就绪状态, pod才会按照标签加入service  
+        ########### livenessProbe,readinessProbe 中接受属性
+        exec: <Object>
+          command: <[]string>  
+        httpGet: <Object>
+          host: <string> # 连接的主机名，默认连接到pod的IP。你可能想在http header中设置”Host”而不是使用IP
+          httpHeaders: <[]Object>  # 自定义请求的header。HTTP运行重复的header
+          path: <string> # 访问的HTTP server的path
+          port: <string> # 访问的容器的端口名字或者端口号。端口号必须介于1和65525之间
+          scheme: <string> # 连接使用的schema，默认HTTP
+        tcpSocket: <Object>
+          host: <string>
+          port: <string>
+        initialDelaySeconds: <integer> # 容器启动后，等待多少秒之后进行第一次探测
+        periodSeconds: <integer> # 执行探测的频率。默认是10秒，最小1秒
+        successThreshold: <integer> # 探测失败后，最少连续探测成功多少次才被认定为成功。默认是1。对于liveness必须是1。最小值是1
+        failureThreshold: <integer> # 探测成功后，最少连续探测失败多少次才被认定为失败。默认是3。最小值是1
+        timeoutSeconds: <integer> # 探测超时时间。默认1秒，最小1秒
+
+      resources: # CPU的单位是milicpu，500mcpu=0.5cpu；而内存的单位则包括E, P, T, G, M, K, Ei, Pi, Ti, Gi, Mi, Ki等
+        requests: # 请求
+          cpu: "300m"
+          memory: "64Mi"
+        limits: # 上限
+          cpu: "500m"
+          memory: "128Mi"
+
+    initContainers: # Init Container在所有容器运行之前执行（run-to-completion），常用来初始化配置
+    - name: <string>
+
     nodeName: nodename 指定node节点
     nodeSelector: <map[string]string> 指定node的label标签
     restartPolicy: <string> Always, OnFailure, Never. Default to Always.
+    # Always：只要退出就重启
+    # OnFailure：失败退出（exit code不等于0）时重启
+    # Never：只要退出就不再重启
 ```
 
 
@@ -108,24 +122,55 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: flask-app
+  name: flaskapp-pod-v1
   namespace: default
   labels:
-    language: python
-    frame: flask
+    app: flaskapp
+    version: v1
+  annotations: 
+    note: "This is Flask app."
 spec:
   containers:
-    - name: flaskapp
-      image: sakuragaara/flaskapp:v1
-      imagePullPolicy: Never
-      ports:
-        - name: http
-          containerPort: 5000
-      livenessProbe:
-          tcpSocket:
-              port: 5000
-          timeoutSeconds: 3
-  restartPolicy: OnFailure
+  - name: flaskapp-container-v1
+    image: sakuragaara/flaskapp:v1
+    imagePullPolicy: Never
+    ports:
+      - name: http
+        containerPort: 5000
+    livenessProbe:
+      httpGet:
+        port: 5000
+        path: /index
+      initialDelaySeconds: 30
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 8
+    env:
+        - name: MY_NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: MY_POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: MY_POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: MY_POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        - name: MY_APP_NAME
+          value: Flask APP
+    resources:
+      requests:
+        cpu: "0.1"
+        memory: "56Mi"
+      limits:
+        cpu: "1"
+        memory: "128Mi"
 ```
 
-***tcpSocket没有加host，主要是host默认为containers的IP，而flask启动是0.0.0.0，使用127.0.0.1监听会报错（不知道为什么）***
+***tcpSocket没有加host，主要是host默认为containers的IP，而flask启动是0.0.0.0，使用127.0.0.1监听会报错***

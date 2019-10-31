@@ -112,7 +112,7 @@ Deployment与ReplicaSet一样，定义控制器``apiVersion``,``kind``,``metadat
     ![更新镜像](/images/img/20190423/kubectl_update3.png)  
 
 #### 回滚  
-  - 使用``kubectl rollout history deployment flask-deploy``,可查看Deployment更新历史版本,``--revision=1`` 可查看Deployment的详细信息  
+  - 使用``kubectl rollout history deployment flask-deploy``,可查看Deployment更新历史版本,``--revision=1`` 可查看Deployment的详细信息，在``kubectl apply``时添加``--record``才会查看到更新命令备注信息  
   - 使用``kubectl rollout undo deployment flask-deploy --to-revision=1`` 进行回滚  
     ![回滚](/images/img/20190423/kubectl_rollout.png)  
 
