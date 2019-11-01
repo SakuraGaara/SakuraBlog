@@ -54,12 +54,12 @@ spec:
       - name: <string>
         containerPort: <integer>
 
-      command: <[]string>
+      command: <[]string> # 运行的应用程序，类似docker的entrypoint,并且这里的命令不会允许中shell中
       args: <[]string> # args将参数传给command
       
       lifecycle:
         postStart: <Object> 
-            # 容器创建成功后，运行前的任务，用于资源部署、环境准备等
+            # 容器创建成功后，运行前的任务，用于资源部署、环境准备等，在完成之前，容器处于ContainerCreating状态
         preStop: <Object> 
           # 在容器被终止前的任务，用于优雅关闭应用程序、通知其他系统等等
        
