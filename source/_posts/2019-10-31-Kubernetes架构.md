@@ -43,6 +43,9 @@ tags:
 3. Scheduler也监测Minion节点信息，由于会频繁查找Minion节点，Scheduler会缓存一份最新的信息在本地。
 4. 最后，Scheduler在分发Pod到指定的Minion节点后，会把Pod相关的信息Binding写回API Server。
 
+#### etcd[存储组件]
+支持一致性和高可用的名值对存储组件，Kubernetes集群的所有配置信息都存储在 etcd 中。
+
 ### kube-node[服务节点]
 
 - kubelet结构图
@@ -65,3 +68,13 @@ Proxy不但解决了同一主宿机相同服务端口冲突的问题，还提供
 
 ### kubectl（kubelet client）[集群管理命令行工具集]
 通过客户端的kubectl命令集操作，API Server响应对应的命令结果，从而达到对kubernetes集群的管理。
+
+### Addons
+使用 Kubernetes 资源（DaemonSet、Deployment等）实现集群的功能特性。由于他们提供集群级别的功能特性，addons使用到的Kubernetes资源都放置在 kube-system 名称空间下。
+
+- DNS（kube-dns / core dns）
+除了 DNS Addon 以外，其他的 addon 都不是必须的，所有 Kubernetes 集群都应该有 Cluster DNS
+- Web UI（Dashboard）
+Dashboard 是一个Kubernetes集群的 Web 管理界面。用户可以通过该界面管理集群。
+- Kuboard
+Kuboard 是一款基于Kubernetes的微服务管理界面.
