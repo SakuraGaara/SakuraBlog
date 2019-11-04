@@ -7,7 +7,7 @@ tags:
 
 ## Kubernetes的总架构图
 
-![master的工作流程图](/images/img/20191031/Kubernetes总架构图.png) 
+![master的工作流程图](/images/img/20191031/kubernetes架构图.png) 
 <!--more-->
 
 ## Kubernetes各个组件
