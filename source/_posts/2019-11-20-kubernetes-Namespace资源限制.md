@@ -13,6 +13,7 @@ http://docs.kubernetes.org.cn/
 kubectl create namespace dev
 ```
 或者
+<!--more-->
 ```yaml
 apiVersion: v1
 kind: Namespace
