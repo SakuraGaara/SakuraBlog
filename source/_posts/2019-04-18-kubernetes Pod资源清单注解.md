@@ -89,7 +89,7 @@ spec:
         failureThreshold: <integer> # 探测成功后，最少连续探测失败多少次才被认定为失败。默认是3。最小值是1
         timeoutSeconds: <integer> # 探测超时时间。默认1秒，最小1秒
 
-      resources: # CPU的单位是milicpu，500mcpu=0.5cpu；而内存的单位则包括E, P, T, G, M, K, Ei, Pi, Ti, Gi, Mi, Ki等
+      resources: # CPU的单位是milicpu，单位后缀m代表“千分之一核心”，500mcpu=0.5cpu；而内存的单位则包括E, P, T, G, M, K, Ei, Pi, Ti, Gi, Mi, Ki等
         requests: # 请求
           cpu: "300m"
           memory: "64Mi"
