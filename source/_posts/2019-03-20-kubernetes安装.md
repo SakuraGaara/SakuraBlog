@@ -31,7 +31,7 @@ $ cat /proc/sys/net/bridge/bridge-nf-call-ip6tables
 $ cat /proc/sys/net/bridge/bridge-nf-call-iptables  
 1  
 ```
-## 安装kuberbetes和docker  
+## 安装kubernetes和docker  
 ### 准备镜像源到/etc/yum.repos.d/  
 - docker-ce源   
 ```
@@ -58,13 +58,13 @@ rpm --import rpm-package-key.gpg
 yum repolist  
 ```
   
-### 安装kuberbetes和docker  
+### 安装kubernetes和docker  
 - 安装kublete、kubeadm、docker、kubectl kubectl仅master安装即可  
 ```
 $ yum install docker-ce-18.06.3 kubelet-1.12.0 kubeadm-1.12.0 kubectl-1.12.0  
 ```
   
-### 配置kuberbetes和docker  
+### 配置kubernetes和docker  
 - docker添加代理，[service]下添加,为了翻墙更改docker默认拉取镜像的源[这一步仅仅是为了翻墙下载镜像]  
 ```
 $ vim /usr/lib/systemd/system/docker.service  
