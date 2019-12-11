@@ -1,5 +1,5 @@
 ---
-title: Jenkins pipeline语法
+title: Jenkins pipeline
 categories: Jenkins
 tags:
   - Jenkins
