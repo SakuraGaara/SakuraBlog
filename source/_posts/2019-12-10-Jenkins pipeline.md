@@ -5,6 +5,10 @@ tags:
   - Jenkins
 ---
 
+> Jenkins 使用流水线方式部署项目，使发布流程更加清晰透明
+流水线采用Groovy语言，须安装pipeline插件
+以下Demo：
+
 <!--more-->
 
 ```groovy
