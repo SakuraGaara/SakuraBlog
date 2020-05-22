@@ -1,6 +1,7 @@
 ---
-title: kubernetes安装  
-categories: kubernetes  
+title: kubernetes安装
+date: 2019-03-20
+categories: kubernetes
 tags:  
   - kubernetes
 ---

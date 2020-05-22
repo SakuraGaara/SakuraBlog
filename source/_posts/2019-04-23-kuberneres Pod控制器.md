@@ -1,5 +1,6 @@
 ---
 title: kubernetes Pod控制器
+date: 2019-04-23
 categories: kubernetes
 tags:
   - kubernetes

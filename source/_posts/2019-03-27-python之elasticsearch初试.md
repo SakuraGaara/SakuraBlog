@@ -1,5 +1,6 @@
 ---
 title: python之elasticsearch初试
+date: 2019-03-27
 categories: elasticsearch
 tags:
   - elasticsearch

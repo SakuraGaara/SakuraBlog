@@ -1,5 +1,6 @@
 ---
 title: kubernetes-Namespace资源限制
+date: 2019-11-20
 categories: kubernetes
 tags:
   - kubernetes

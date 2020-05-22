@@ -1,5 +1,6 @@
 ---
 title: docker-compose模板文件主要命令
+date: 2019-02-20
 categories: docker compose
 tags:
   - docker compose

@@ -1,5 +1,6 @@
 ---
 title: Flask笔记-SQLAlchemy应用
+date: 2020-01-02
 categories: wtforms
 tags:
   - wtforms

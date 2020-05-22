@@ -1,5 +1,6 @@
 ---
 title: Docker_Registry
+date: 2019-02-14
 categories: docker
 tags:
   - docker

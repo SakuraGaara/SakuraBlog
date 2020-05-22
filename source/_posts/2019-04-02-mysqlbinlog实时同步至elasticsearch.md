@@ -1,5 +1,6 @@
 ---
 title: mysqlbinlog实时同步至elasticsearch 
+date: 2019-04-02
 categories: elasticsearch
 tags:  
   - elasticsearch  

@@ -1,5 +1,6 @@
 ---
 title: kubernetes Pod资源清单注解
+date: 2019-04-18
 categories: kubernetes
 tags:
   - kubernetes

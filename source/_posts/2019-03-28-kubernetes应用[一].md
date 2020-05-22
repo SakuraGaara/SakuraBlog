@@ -1,5 +1,6 @@
 ---
-title: kubernetes应用[一]  
+title: kubernetes应用[一]
+date: 2019-03-28
 categories: kubernetes  
 tags:  
   - kubernetes  

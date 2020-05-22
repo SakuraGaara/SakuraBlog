@@ -1,5 +1,6 @@
 ---
 title: hadoop+hive+hbase环境
+date: 2019-06-30
 categories: 大数据
 tags:
   - hadoop

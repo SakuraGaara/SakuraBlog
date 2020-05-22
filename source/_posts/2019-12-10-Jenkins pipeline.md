@@ -1,5 +1,6 @@
 ---
 title: Jenkins pipeline
+date: 2019-12-10
 categories: Jenkins
 tags:
   - Jenkins

@@ -1,5 +1,6 @@
 ---
 title: docker-compose样例
+date: 2019-02-17
 categories: docker compose
 tags:
   - docker compose

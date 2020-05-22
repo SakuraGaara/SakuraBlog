@@ -1,5 +1,6 @@
 ---
 title: Kubernetes架构
+date: 2019-10-31
 categories: kubernetes
 tags:
   - kubernetes
